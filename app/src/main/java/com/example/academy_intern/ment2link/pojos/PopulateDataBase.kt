@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.Pojo
+package com.example.academy_intern.ment2link.pojos
 
 /**
  * Created by academy_intern on 2018/01/23.

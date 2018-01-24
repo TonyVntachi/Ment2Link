@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.Activities
+package com.example.academy_intern.ment2link.activities
 
 import android.content.Intent
 import android.net.Uri
@@ -6,9 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
-import com.example.academy_intern.ment2link.Drawers.MentorNavigatationDrawer
-import com.example.academy_intern.ment2link.Pojo.PopulateDataBase
-import com.example.academy_intern.ment2link.Pojo.PopulateMembers
+import com.example.academy_intern.ment2link.drawers.MentorNavigatationDrawer
+import com.example.academy_intern.ment2link.pojos.PopulateDataBase
+import com.example.academy_intern.ment2link.pojos.PopulateMembers
 import com.example.academy_intern.ment2link.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth

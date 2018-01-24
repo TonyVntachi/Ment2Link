@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,21 +19,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.Login"
+            android:name=".activities.Login"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Drawers.MentorNavigatationDrawer"
+            android:name=".drawers.MentorNavigatationDrawer"
             android:label="@string/title_activity_new_navigatation_drawer_fix"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.MentorProfile" />
+        <activity android:name=".activities.MentorProfile" />
         <activity
-            android:name=".Activities.PasswordRestActivity"
-            android:parentActivityName=".Activities.Login" />
-        <activity
-            android:name=".SearchMentorActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".activities.PasswordRestActivity"
+            android:parentActivityName=".activities.Login" />
+        <activity android:name=".activities.FindMentorSearch"
+                  android:theme="@style/AppTheme.NoActionBar">
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -41,12 +40,9 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".Activities.EditAppointment" />
-        <activity android:name=".Activities.FindMentorSearch" />
-        <activity android:name=".Activities.Calender" />
-        <activity android:name=".Activities.ViewMentorCalender" />
-        <activity android:name=".Activities.RequestActivity"></activity>
+        <activity android:name=".activities.RequestActivity"></activity>
     </application>
 
 </manifest>

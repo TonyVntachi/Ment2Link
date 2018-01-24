@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.FirebaseClasses
+package com.example.academy_intern.ment2link.firebaseClasses
 
 import android.util.Log
 import com.google.firebase.iid.FirebaseInstanceId

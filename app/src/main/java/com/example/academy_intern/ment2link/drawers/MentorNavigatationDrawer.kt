@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.Drawers
+package com.example.academy_intern.ment2link.drawers
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -9,14 +9,12 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.academy_intern.ment2link.Activities.FindMentorSearch
-import com.example.academy_intern.ment2link.Activities.MentorProfile
+import com.example.academy_intern.ment2link.activities.MentorProfile
 import com.example.academy_intern.ment2link.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_new_navigatation_drawer_fix.*
 import kotlinx.android.synthetic.main.app_bar_new_navigatation_drawer_fix.*
 import android.content.DialogInterface
-import android.view.View
 import android.widget.DatePicker
 import java.util.*
 

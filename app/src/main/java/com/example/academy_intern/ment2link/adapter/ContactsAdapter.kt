@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.Adapter
+package com.example.academy_intern.ment2link.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -11,8 +11,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.academy_intern.ment2link.Activities.FindMentorSearch
-import com.example.academy_intern.ment2link.Pojo.Contact
+import com.example.academy_intern.ment2link.activities.FindMentorSearch
+import com.example.academy_intern.ment2link.pojos.Contact
 import com.example.academy_intern.ment2link.R
 import java.util.ArrayList
 

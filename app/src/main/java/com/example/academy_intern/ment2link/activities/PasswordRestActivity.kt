@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.Activities
+package com.example.academy_intern.ment2link.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

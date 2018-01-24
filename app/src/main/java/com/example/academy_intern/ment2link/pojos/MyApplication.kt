@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.Pojo
+package com.example.academy_intern.ment2link.pojos
 
 import android.app.Application
 import android.text.TextUtils

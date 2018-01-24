@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.Activities
+package com.example.academy_intern.ment2link.activities
 
 import android.app.SearchManager
 import android.content.Context
@@ -11,17 +11,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import com.android.volley.Response
-import com.android.volley.VolleyError
-import com.android.volley.toolbox.JsonArrayRequest
-import com.example.academy_intern.ment2link.Adapter.ContactsAdapter
+import com.example.academy_intern.ment2link.adapter.ContactsAdapter
 import com.example.academy_intern.ment2link.MyDividerItemDecoration
-import com.example.academy_intern.ment2link.Pojo.Contact
-import com.example.academy_intern.ment2link.Pojo.MyApplication
+import com.example.academy_intern.ment2link.pojos.Contact
 import com.example.academy_intern.ment2link.R
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import org.json.JSONArray
 
 class FindMentorSearch : AppCompatActivity() {
 

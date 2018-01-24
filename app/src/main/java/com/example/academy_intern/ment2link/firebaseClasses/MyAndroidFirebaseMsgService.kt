@@ -5,7 +5,7 @@ import android.content.Intent
 import android.media.RingtoneManager
 import android.support.v4.app.NotificationCompat
 import android.util.Log
-import com.example.academy_intern.ment2link.Drawers.MentorNavigatationDrawer
+import com.example.academy_intern.ment2link.drawers.MentorNavigatationDrawer
 import com.example.academy_intern.ment2link.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.academy_intern.ment2link.Drawers.MentorNavigatationDrawer">
+    tools:context="com.example.academy_intern.ment2link.drawers.MentorNavigatationDrawer">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
