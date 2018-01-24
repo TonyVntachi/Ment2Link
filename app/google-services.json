@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "36514952815",
+    "firebase_url": "https://ment2link-756da.firebaseio.com",
+    "project_id": "ment2link-756da",
+    "storage_bucket": "ment2link-756da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36514952815:android:58b13a642428299b",
+        "android_client_info": {
+          "package_name": "com.example.academy_intern.ment2link"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36514952815-0geqeie0dccvg5nemftigmqehq4gdkp3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.academy_intern.ment2link",
+            "certificate_hash": "1392ec764ae8e5ab6b0b1d982c804ecc76cd0872"
+          }
+        },
+        {
+          "client_id": "36514952815-7m0dq62bk1p4kb6ij2ecsvhtg0ull655.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBJ50CrlutKq1fFH1d2HxodqZTygcdtzk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36514952815-7m0dq62bk1p4kb6ij2ecsvhtg0ull655.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

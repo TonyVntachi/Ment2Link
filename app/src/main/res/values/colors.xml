@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorLoader">#80b29600</color>
+    <color name="colorPrimary">#b29600</color>
+    <color name="colorPrimaryDark">#b29600</color>
+    <color name="colorAccent">#262323</color>
+    <color name="contact_name">#333333</color>
+    <color name="contact_number">#8c8c8c</color>
+    <color name="cardPrimary"> #80262323</color>
+
+</resources>
