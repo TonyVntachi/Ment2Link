@@ -30,9 +30,9 @@
         <activity
             android:name=".activities.PasswordRestActivity"
             android:parentActivityName=".activities.Login" />
-        <activity android:name=".activities.FindMentorSearch"
-                  android:theme="@style/AppTheme.NoActionBar">
-
+        <activity
+            android:name=".activities.FindMentorSearch"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -40,9 +40,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".activities.RequestActivity"></activity>
+        <activity android:name=".activities.RequestActivity" />
     </application>
 
 </manifest>

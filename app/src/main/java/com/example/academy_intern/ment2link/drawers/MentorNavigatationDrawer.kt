@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_new_navigatation_drawer_fix.*
 import kotlinx.android.synthetic.main.app_bar_new_navigatation_drawer_fix.*
 import android.content.DialogInterface
 import android.widget.DatePicker
+import com.example.academy_intern.ment2link.activities.RequestActivity
 import java.util.*
 
 
@@ -77,6 +78,9 @@ class MentorNavigatationDrawer : AppCompatActivity(), NavigationView.OnNavigatio
                 startActivity(i)
             }
             R.id.nav_requests -> {
+
+                val i = Intent(this, RequestActivity::class.java)
+                startActivity(i)
 
             }
             R.id.nav_blocked -> {

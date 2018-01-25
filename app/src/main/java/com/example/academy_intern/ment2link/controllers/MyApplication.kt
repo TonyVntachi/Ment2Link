@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link.pojos
+package com.example.academy_intern.ment2link.controllers
 
 import android.app.Application
 import android.text.TextUtils
@@ -21,7 +21,7 @@ class MyApplication : Application() {
                 mRequestQueue = Volley.newRequestQueue(applicationContext)
             }
 
-            return this!!.mRequestQueue!!
+            return this.mRequestQueue!!
         }
 
     override fun onCreate() {
