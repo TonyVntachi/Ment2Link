@@ -51,6 +51,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.github.ehehhh:Gooey-Loader:v1.1.1'
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
 }
 
 

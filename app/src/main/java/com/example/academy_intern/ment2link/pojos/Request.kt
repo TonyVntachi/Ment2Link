@@ -10,9 +10,9 @@ class Request(var requestName: String, var requestDate: String) {
 
 
 
-    set(requestNameVal)
+    set( requestName)
     {
-        requestName1 = requestNameVal!!.toLowerCase()
+        requestName1 = requestName!!.toLowerCase()
     }
 
 
