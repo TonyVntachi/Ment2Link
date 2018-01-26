@@ -12,7 +12,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.example.academy_intern.ment2link.adapter.ContactsAdapter
-import com.example.academy_intern.ment2link.MyDividerItemDecoration
+import com.example.academy_intern.ment2link.controllers.MyDividerItemDecoration
 import com.example.academy_intern.ment2link.pojos.Contact
 import com.example.academy_intern.ment2link.R
 
@@ -44,13 +44,13 @@ class FindMentorSearch : AppCompatActivity() {
 
 
         // white background notification bar
-        whiteNotificationBar(findViewById<View>(R.id.recycler_view));
+        whiteNotificationBar(findViewById<View>(R.id.recycler_view))
 
         val mLayoutManager = LinearLayoutManager(applicationContext)
-        recyclerView!!.setLayoutManager(mLayoutManager)
-        recyclerView!!.setItemAnimator(DefaultItemAnimator())
+        recyclerView!!.layoutManager = mLayoutManager
+        recyclerView!!.itemAnimator = DefaultItemAnimator()
         recyclerView!!.addItemDecoration(MyDividerItemDecoration(this, DividerItemDecoration.VERTICAL, 36))
-        recyclerView!!.setAdapter(mAdapter)
+        recyclerView!!.adapter = mAdapter
 
 
 
@@ -65,7 +65,7 @@ class FindMentorSearch : AppCompatActivity() {
         // Associate searchable configuration with the SearchView
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
         searchView = menu.findItem(R.id.action_search)
-                .getActionView() as SearchView?
+                .actionView as SearchView?
         searchView?.setSearchableInfo(searchManager
                 .getSearchableInfo(componentName))
         //searchView?.maxWidth ?: = Integer.MAX_VALUE
@@ -74,7 +74,7 @@ class FindMentorSearch : AppCompatActivity() {
         searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 // filter recycler view when query submitted
-                mAdapter?.getFilter()!!.filter(query)
+                mAdapter?.filter!!.filter(query)
                 return false
             }
 
@@ -92,7 +92,7 @@ class FindMentorSearch : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        val id = item.getItemId()
+        val id = item.itemId
 
 
         return if (id == R.id.action_search) {
@@ -104,8 +104,8 @@ class FindMentorSearch : AppCompatActivity() {
 
     override fun onBackPressed() {
         // close search view on back button pressed
-        if (!searchView!!.isIconified()) {
-            searchView!!.setIconified(true)
+        if (!searchView!!.isIconified) {
+            searchView!!.isIconified = true
             return
         }
         super.onBackPressed()

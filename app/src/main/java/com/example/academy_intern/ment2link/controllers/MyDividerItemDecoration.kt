@@ -1,4 +1,4 @@
-package com.example.academy_intern.ment2link
+package com.example.academy_intern.ment2link.controllers
 
 import android.content.Context
 import android.graphics.Canvas
