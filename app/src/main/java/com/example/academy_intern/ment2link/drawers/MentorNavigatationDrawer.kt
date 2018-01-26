@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.app_bar_new_navigatation_drawer_fix.*
 import android.content.DialogInterface
 import android.widget.DatePicker
 import com.example.academy_intern.ment2link.activities.RequestActivity
+import com.example.academy_intern.ment2link.activities.CalenderActivity
 import java.util.*
 
 
@@ -63,10 +64,7 @@ class MentorNavigatationDrawer : AppCompatActivity(), NavigationView.OnNavigatio
     }
 
 
-
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean
-    {
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
 
 
@@ -90,45 +88,12 @@ class MentorNavigatationDrawer : AppCompatActivity(), NavigationView.OnNavigatio
 
                 //opens view to calender
 
-                val mDate = DatePickerDialog(this@MentorNavigatationDrawer, date, 2016, 2, 24)
-                mDate.datePicker.minDate = System.currentTimeMillis() - 1000
-                mDate.show()
-
-
-
-                val dateSetListener = object : DatePickerDialog.OnDateSetListener {
-                    override fun onDateSet(view: DatePicker, year: Int, monthOfYear: Int,
-                                           dayOfMonth: Int) {
-
-                        cal.set(Calendar.YEAR, year)
-                        cal.set(Calendar.MONTH, monthOfYear)
-                        cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-
-                    }
-                }
-
-                mDate.setButton(DialogInterface.BUTTON_POSITIVE, "ok",
-                        DialogInterface.OnClickListener { dialog, which ->
-                            if (which == DialogInterface.BUTTON_POSITIVE) {
-
-                                //val i = Intent(this, MentorProfile::class.java)
-                                //startActivity(i)
-
-                            }
-                        })
-
-
-                mDate.setButton(DialogInterface.BUTTON_NEGATIVE, "cancel",
-                        DialogInterface.OnClickListener { dialog, which ->
-                    if (which == DialogInterface.BUTTON_NEGATIVE) {
-
-                    }
-                })
+                val i = Intent(this, CalenderActivity::class.java)
+                startActivity(i)
 
 
             }
-            R.id.nav_about ->
-            {
+            R.id.nav_about -> {
                 //val i = Intent(this, FindMentorSearch::class.java)
                 ///startActivity(i)
             }
@@ -138,7 +103,7 @@ class MentorNavigatationDrawer : AppCompatActivity(), NavigationView.OnNavigatio
                 auth.signOut()
 
                 auth.addAuthStateListener {
-                    if(auth.currentUser == null){
+                    if (auth.currentUser == null) {
                         this.finish()
                     }
                 }
@@ -148,8 +113,9 @@ class MentorNavigatationDrawer : AppCompatActivity(), NavigationView.OnNavigatio
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
-    }val date: DatePickerDialog.OnDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth -> view.minDate = System.currentTimeMillis() - 1000 }
+    }
 
+    val date: DatePickerDialog.OnDateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth -> view.minDate = System.currentTimeMillis() - 1000 }
 
 
 }
