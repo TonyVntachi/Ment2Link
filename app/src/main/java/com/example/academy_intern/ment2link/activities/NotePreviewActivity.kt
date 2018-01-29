@@ -12,12 +12,14 @@ import java.util.Date
 import java.util.Locale
 import com.example.academy_intern.ment2link.pojos.MyEventDay
 
+///class
 class NotePreviewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_note_preview)
 
+        ///Getting The Info On Input By Adding Event
         val intent = intent
         val note = findViewById<View>(R.id.note) as TextView
         if (intent != null) {
@@ -35,6 +37,7 @@ class NotePreviewActivity : AppCompatActivity() {
         }
     }
 
+    ///On Date
     companion object {
         fun getFormattedDate(date: Date): String {
             val simpleDateFormat = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
