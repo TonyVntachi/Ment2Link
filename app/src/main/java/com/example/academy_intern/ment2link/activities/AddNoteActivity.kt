@@ -18,7 +18,9 @@ class AddNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_note)
 
-        val datePicker = findViewById<View>(R.id.datePicker) as CalendarView
+
+
+        val datePicker = findViewById<View>(R.id.datePicker) as com.applandeo.materialcalendarview.CalendarView
 
 
         val button = findViewById<View>(R.id.addNoteButton) as Button

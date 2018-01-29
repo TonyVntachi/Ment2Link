@@ -16,8 +16,10 @@ import com.google.firebase.database.FirebaseDatabase
 
 class Login : AppCompatActivity() {
 
-
+    //firebase database instance
     var fbAuth = FirebaseAuth.getInstance()
+
+    //varibles to be used in sign in
     private var email_adress: String? = null
     private var pass: String? = null
 
@@ -29,19 +31,20 @@ class Login : AppCompatActivity() {
        // actionBar!!.hide()
 
 
-        //Button OnClick() method
+        //input fields
         var inputEmail = findViewById<EditText>(R.id.etUserName)
         var progress = findViewById<ProgressBar>(R.id.progressBar)
         var inputPassword = findViewById<EditText>(R.id.etPassword)
 
+        //buttons
         var btnLogin = findViewById<Button>(R.id.btnLogin)
         var btnSignUp = findViewById<TextView>(R.id.txtSignUp)
         var btnReset = findViewById<TextView>(R.id.tvFogotPassword)
 
+
+
         btnSignUp.setOnClickListener {
-            //Sign in funtion called with inputs parameters
-//            val i = Intent(this, WebViewActivity::class.java)
-//            startActivity(i)
+            //Sign up direct to rise offical site to join
 
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://thinkrise.com/users/new"))
             val browserChooserIntent = Intent.createChooser(browserIntent, "Choose browser of your choice")
@@ -50,7 +53,7 @@ class Login : AppCompatActivity() {
 
 
         btnReset.setOnClickListener {
-            //Sign in funtion called with inputs parameters
+            //Reset the users password by using the users email
             startActivity(Intent(this, PasswordRestActivity::class.java))
         }
 
@@ -58,6 +61,8 @@ class Login : AppCompatActivity() {
             email_adress = inputEmail?.text.toString()
             pass = inputPassword?.text.toString()
 
+
+            //test to see if input field are supplied the correct information
             if(TextUtils.isEmpty(email_adress)){
                 Toast.makeText(this,"Enter E-mail address",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -69,10 +74,13 @@ class Login : AppCompatActivity() {
 
             progress.visibility
 
+
+            //Pass login Credentials to firebase using email varification
             fbAuth!!.signInWithEmailAndPassword(email_adress!!, pass!!).addOnCompleteListener(this, OnCompleteListener { task ->
                 //If logged in successfully then true
                 if(task.isSuccessful){
 
+                    //validate password length
                     if(pass!!.length < 6)
                     {
                         Toast.makeText(this,"Enter > 6 digits",Toast.LENGTH_LONG).show()
@@ -80,6 +88,7 @@ class Login : AppCompatActivity() {
                         Toast.makeText(this,"Successfully logged in",Toast.LENGTH_LONG).show()
                     }
 
+                    //select role of user
                     val fbRef = FirebaseDatabase.getInstance().getReference("Role")
                     val fbRoleId = fbRef.push().key
 

@@ -16,7 +16,7 @@ class PasswordRestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password_rest)
 
-
+        // set input feilds views
         var inputEmail = findViewById<EditText>(R.id.email)
         var btnReset = findViewById<Button>(R.id.btn_reset_password)
         //var btnBack = findViewById<Button>(R.id.btn_back)
@@ -28,9 +28,13 @@ class PasswordRestActivity : AppCompatActivity() {
 //            finish()
 //        }
 
+
+        //click button to start password rest
         btnReset.setOnClickListener {
             var email: String?
 
+
+            //validate email address is not empty
             email = inputEmail?.text.toString()
             if (TextUtils.isEmpty(email)) {
                 Toast.makeText(applicationContext, "Enter your registered email id", Toast.LENGTH_LONG).show()
@@ -39,6 +43,7 @@ class PasswordRestActivity : AppCompatActivity() {
 
             progress_bar.visibility
 
+            //use firebase authentication to send email rest link to email address if email found
             auth.sendPasswordResetEmail(email)
 
                     .addOnCompleteListener { task ->

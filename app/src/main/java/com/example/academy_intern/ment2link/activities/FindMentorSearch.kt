@@ -18,6 +18,7 @@ import com.example.academy_intern.ment2link.R
 
 class FindMentorSearch : AppCompatActivity() {
 
+    //declare members to use
     private val TAG = MainActivity::class.java.simpleName
     private var recyclerView: RecyclerView? = null
     private var contactList: ArrayList<Contact>? = null
@@ -46,6 +47,8 @@ class FindMentorSearch : AppCompatActivity() {
         // white background notification bar
         whiteNotificationBar(findViewById<View>(R.id.recycler_view))
 
+
+        // set layoutManager properties
         val mLayoutManager = LinearLayoutManager(applicationContext)
         recyclerView!!.layoutManager = mLayoutManager
         recyclerView!!.itemAnimator = DefaultItemAnimator()
@@ -112,6 +115,7 @@ class FindMentorSearch : AppCompatActivity() {
     }
 
 
+    //presonalise notification bar settings
     private fun whiteNotificationBar(view: View) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             var flags = view.systemUiVisibility
@@ -122,6 +126,8 @@ class FindMentorSearch : AppCompatActivity() {
     }
 
 
+
+    //dummy code to test values
     fun onContactSelected(contact: Contact) {
         Toast.makeText(applicationContext, "Selected: " + contact.getName() + ", " + contact.getPhone(), Toast.LENGTH_LONG).show()
     }
