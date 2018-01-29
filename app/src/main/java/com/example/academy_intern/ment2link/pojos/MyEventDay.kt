@@ -11,7 +11,7 @@ import com.applandeo.materialcalendarview.EventDay
 
 import java.util.Calendar
 
-internal class MyEventDay : EventDay, Parcelable {
+class MyEventDay : EventDay, Parcelable {
     var note: String? = null
         private set
 

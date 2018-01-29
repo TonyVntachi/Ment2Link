@@ -10,6 +10,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <com.applandeo.materialcalendarview.CalendarView
             android:id="@+id/datePicker"
             android:layout_width="0dp"
@@ -21,6 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:selectionColor="@color/colorAccent"
             app:todayLabelColor="@color/colorPrimaryDark" />
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/addNoteButton"
             android:layout_width="0dp"
@@ -31,6 +33,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
+
         <EditText
             android:id="@+id/noteEditText"
             android:layout_width="0dp"
@@ -43,6 +46,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/datePicker" />
+
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
