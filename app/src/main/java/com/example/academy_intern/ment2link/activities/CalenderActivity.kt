@@ -17,6 +17,7 @@ import java.util.Calendar
 
 import com.example.academy_intern.ment2link.pojos.MyEventDay
 
+///name of class
 class CalenderActivity : AppCompatActivity() {
     private var mCalendarView: CalendarView? = null
     private val mEventDays = ArrayList<EventDay>()
@@ -25,11 +26,13 @@ class CalenderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calender)
 
+        ///viewing the calendar and clicking the floating button
         mCalendarView = findViewById<View>(R.id.calendarView) as CalendarView
         val floatingActionButton = findViewById<View>(R.id.floatingActionButton) as FloatingActionButton
         floatingActionButton.setOnClickListener(View.OnClickListener { addNote() })
     }
 
+    ///Viewing Event
     fun MyEventDay(view: View) {
         val MyEventDay = Calendar.getInstance()
         val i = Intent(Intent.ACTION_EDIT)
@@ -41,6 +44,7 @@ class CalenderActivity : AppCompatActivity() {
         i.putExtra("title", "Sample Calender Event Android Application")
         startActivity(i)
 
+        ///Clicking On The Day To See Your Event
         mCalendarView!!.setOnDayClickListener(object : OnDayClickListener {
             override fun onDayClick(eventDay: EventDay) {}
         })
@@ -55,11 +59,13 @@ class CalenderActivity : AppCompatActivity() {
         }
     }
 
+    ///Adding Event
     private fun addNote() {
         val intent = Intent(this, AddNoteActivity::class.java)
         startActivityForResult(intent, ADD_NOTE)
     }
 
+    ///Previewing The Event
     private fun previewNote(eventDay: EventDay) {
         val intent = Intent(this, NotePreviewActivity::class.java)
         if (eventDay is MyEventDay) {

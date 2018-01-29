@@ -12,8 +12,10 @@ import com.example.academy_intern.ment2link.R
 
 import com.example.academy_intern.ment2link.pojos.MyEventDay
 
+///class
 class AddNoteActivity : AppCompatActivity() {
 
+    ///OnCreate
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_note)
@@ -23,12 +25,14 @@ class AddNoteActivity : AppCompatActivity() {
         val datePicker = findViewById<View>(R.id.datePicker) as com.applandeo.materialcalendarview.CalendarView
 
 
+        /// Button To Add Event
         val button = findViewById<View>(R.id.addNoteButton) as Button
         val noteEditText = findViewById<View>(R.id.noteEditText) as EditText
         button.setOnClickListener {
             val returnIntent = Intent()
 
 
+            ///Notification To See That Theres An Event On That Day
             val myEventDay = MyEventDay(datePicker.getSelectedDate(),
                     R.drawable.ic_message_black_48dp, noteEditText.text.toString())
             returnIntent.putExtra(CalenderActivity.RESULT, myEventDay)
