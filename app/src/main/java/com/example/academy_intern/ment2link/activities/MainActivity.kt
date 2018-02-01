@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //this two lines hide the title bar of the activity
-        val actionBar = supportActionBar
+       val actionBar = supportActionBar
         actionBar!!.hide()
 
         var loadingAnimation = findViewById<GooeyLoaderView>(R.id.appLoader)

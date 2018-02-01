@@ -16,6 +16,10 @@ class PasswordRestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password_rest)
 
+        val actionBar = supportActionBar
+        actionBar!!.hide()
+
+
         // set input feilds views
         var inputEmail = findViewById<EditText>(R.id.email)
         var btnReset = findViewById<Button>(R.id.btn_reset_password)

@@ -52,8 +52,8 @@ class CalenderActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         if (requestCode == ADD_NOTE && resultCode == Activity.RESULT_OK) {
-            val myEventDay = data.getParcelableExtra<MyEventDay>(RESULT)
-            mCalendarView!!.setDate(myEventDay.getCalendar())
+           val myEventDay = data.getParcelableExtra<MyEventDay>(RESULT)
+            mCalendarView!!.setDate(myEventDay.calendar)
             mEventDays.add(myEventDay)
             mCalendarView!!.setEvents(mEventDays)
         }
@@ -69,7 +69,7 @@ class CalenderActivity : AppCompatActivity() {
     private fun previewNote(eventDay: EventDay) {
         val intent = Intent(this, NotePreviewActivity::class.java)
         if (eventDay is MyEventDay) {
-            intent.putExtra(EVENT, eventDay as MyEventDay)
+            intent.putExtra(EVENT, eventDay)
         }
         startActivity(intent)
     }

@@ -25,14 +25,14 @@ class NotePreviewActivity : AppCompatActivity() {
         if (intent != null) {
             val event = intent.getParcelableExtra<Parcelable>(CalenderActivity.EVENT)
             if (event is MyEventDay) {
-                val myEventDay = event as MyEventDay
-                supportActionBar!!.setTitle(getFormattedDate(myEventDay.getCalendar().getTime()))
+                val myEventDay = event
+                supportActionBar!!.title = getFormattedDate(myEventDay.calendar.time)
                 note.text = myEventDay.note
                 return
             }
             if (event is EventDay) {
                 val eventDay = event as EventDay
-                supportActionBar!!.setTitle(getFormattedDate(eventDay.getCalendar().getTime()))
+                supportActionBar!!.title = getFormattedDate(eventDay.calendar.time)
             }
         }
     }

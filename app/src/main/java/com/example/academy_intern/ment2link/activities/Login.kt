@@ -5,6 +5,7 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.WindowManager
 import android.widget.*
 import com.example.academy_intern.ment2link.drawers.MentorNavigatationDrawer
 import com.example.academy_intern.ment2link.pojos.PopulateDataBase
@@ -28,13 +29,15 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         //val actionBar = supportActionBar
-       // actionBar!!.hide()
+        //actionBar!!.hide()
 
 
         //input fields
         var inputEmail = findViewById<EditText>(R.id.etUserName)
         var progress = findViewById<ProgressBar>(R.id.progressBar)
         var inputPassword = findViewById<EditText>(R.id.etPassword)
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         //buttons
         var btnLogin = findViewById<Button>(R.id.btnLogin)

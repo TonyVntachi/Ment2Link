@@ -24,8 +24,8 @@ class MyEventDay : EventDay, Parcelable {
     }
 
     override fun writeToParcel(parcel: Parcel, i: Int) {
-        parcel.writeSerializable(getCalendar())
-        parcel.writeInt(getImageResource())
+        parcel.writeSerializable(calendar)
+        parcel.writeInt(imageResource)
         parcel.writeString(note)
     }
 

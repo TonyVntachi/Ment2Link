@@ -32,7 +32,7 @@ class AddNoteActivity : AppCompatActivity() {
 
 
             ///Notification To See That Theres An Event On That Day
-            val myEventDay = MyEventDay(datePicker.getSelectedDate(),
+            val myEventDay = MyEventDay(datePicker.selectedDate,
                     R.drawable.ic_message_black_48dp, noteEditText.text.toString())
             returnIntent.putExtra(CalenderActivity.RESULT, myEventDay)
             setResult(Activity.RESULT_OK, returnIntent)
