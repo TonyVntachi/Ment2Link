@@ -5,6 +5,7 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.Window
 import android.view.WindowManager
 import android.widget.*
 import com.example.academy_intern.ment2link.drawers.MentorNavigatationDrawer
@@ -24,13 +25,17 @@ class Login : AppCompatActivity() {
     private var email_adress: String? = null
     private var pass: String? = null
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_login);
         //val actionBar = supportActionBar
         //actionBar!!.hide()
-
+        // remove title
 
         //input fields
         var inputEmail = findViewById<EditText>(R.id.etUserName)

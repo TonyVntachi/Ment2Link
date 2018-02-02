@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.academy_intern.ment2link.drawers.MentorNavigatationDrawer">
@@ -20,8 +22,80 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_new_navigatation_drawer_fix" />
 
 
+    <RelativeLayout
+        android:layout_width="369dp"
+        android:layout_height="136dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="40dp"
+        android:background="@drawable/styletexts"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="4dp">
+
+
+
+
+        <ImageView
+            android:id="@+id/media_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/egprofile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="11dp"
+            android:text="08:00-9:30(1H30m" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView7"
+            android:layout_centerHorizontal="true"
+            android:text="Reason"
+            android:textColor="#3594c8" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/media_image"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_marginBottom="17dp"
+            android:text="Connections" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="170dp"
+            android:layout_height="24dp"
+            android:layout_alignTop="@+id/media_image"
+            android:layout_gravity="center"
+            android:layout_marginStart="37dp"
+            android:layout_toEndOf="@+id/media_image"
+            android:background="@drawable/styletexts"
+            android:paddingLeft="20dp"
+            android:text="GARY BANNATYNE"
+            android:textColor="#3594c8"
+            android:textSize="14sp" />
+
+
+
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
+

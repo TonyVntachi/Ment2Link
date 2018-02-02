@@ -45,6 +45,7 @@
         <activity android:name=".activities.CalenderActivity" />
         <activity android:name=".activities.AddNoteActivity" />
         <activity android:name=".activities.NotePreviewActivity"></activity>
+        
 
     </application>
 
