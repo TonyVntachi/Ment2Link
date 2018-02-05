@@ -26,16 +26,13 @@ class Login : AppCompatActivity() {
     private var pass: String? = null
 
 
-
+    //Full Screen Display
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
-        //val actionBar = supportActionBar
-        //actionBar!!.hide()
-        // remove title
 
         //input fields
         var inputEmail = findViewById<EditText>(R.id.etUserName)
@@ -48,12 +45,10 @@ class Login : AppCompatActivity() {
         var btnLogin = findViewById<Button>(R.id.btnLogin)
         var btnSignUp = findViewById<TextView>(R.id.txtSignUp)
         var btnReset = findViewById<TextView>(R.id.tvFogotPassword)
-
-
-
         btnSignUp.setOnClickListener {
-            //Sign up direct to rise offical site to join
 
+
+            //Sign up direct to rise offical site to join
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://thinkrise.com/users/new"))
             val browserChooserIntent = Intent.createChooser(browserIntent, "Choose browser of your choice")
             startActivity(browserChooserIntent)
